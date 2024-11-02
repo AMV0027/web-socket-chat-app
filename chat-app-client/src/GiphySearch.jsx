@@ -13,7 +13,7 @@ const GiphySearch = ({ onSelectGif }) => {
     }, [searchTerm]);
 
     return (
-        <div className="backdrop-blur-xl bg-black bg-opacity-40 rounded-3xl p-2 max-h-[50vh] overflow-y-scroll">
+        <div className="w-full md:w-[700px] h-auto mx-auto backdrop-blur-xl bg-black bg-opacity-40 rounded-3xl p-2 max-h-[50vh] overflow-y-scroll">
             <input
                 type="text"
                 placeholder="Search GIFs..."
