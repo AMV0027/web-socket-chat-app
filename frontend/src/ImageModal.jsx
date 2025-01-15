@@ -1,4 +1,6 @@
 import React from 'react';
+import { IoIosCloseCircle } from "react-icons/io";
+import { IoMdCloudDownload } from "react-icons/io";
 
 const ImageModal = ({ isOpen, onClose, imageUrl }) => {
     if (!isOpen) return null;
@@ -9,16 +11,16 @@ const ImageModal = ({ isOpen, onClose, imageUrl }) => {
                 <img src={imageUrl} alt="Modal Content" className="max-h-screen max-w-screen" />
                 <button
                     onClick={onClose}
-                    className="absolute top-4 right-4 bg-red-600 text-white p-2 rounded hover:bg-red-700"
+                    className="absolute top-2 right-2 bg-red-500  text-white text-xl p-1 rounded hover:bg-red-600 "
                 >
-                    Close
+                    <IoIosCloseCircle />
                 </button>
                 <a
                     href={imageUrl}
                     download
-                    className="absolute bottom-4 right-4 bg-green-600 text-white p-2 rounded hover:bg-green-700"
+                    className="absolute top-2 right-10 bg-blue-500 text-white p-1 text-xl rounded hover:bg-blue-700"
                 >
-                    Download
+                    <IoMdCloudDownload />
                 </a>
             </div>
         </div>
