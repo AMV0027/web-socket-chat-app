@@ -6,7 +6,7 @@ const GiphySearch = ({ onSelectGif }) => {
 
     useEffect(() => {
         if (searchTerm) {
-            fetch(`https://api.giphy.com/v1/gifs/search?api_key=aeAE34pxPlNQEs2QBvII4mYXMhtevSF5&q=${searchTerm}&limit=20`)
+            fetch(`https://api.giphy.com/v1/gifs/search?api_key=${import.meta.env.VITE_GIPHY_API_KEY}&q=${searchTerm}&limit=20`)
                 .then(response => response.json())
                 .then(data => setGifs(data.data));
         }
