@@ -25,7 +25,7 @@ const ChatRoom = ({ username, room }) => {
     }, [messages]);
 
     useEffect(() => {
-        ws.current = new WebSocket('wss://web-socket-chat-app-sand.vercel.app/api/websocket');
+        ws.current = new WebSocket('wss://web-socket-chat-app-5jc7.onrender.com');
 
         ws.current.onopen = () => {
             ws.current.send(JSON.stringify({ type: 'setUsername', username }));
