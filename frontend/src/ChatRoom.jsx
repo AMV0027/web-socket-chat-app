@@ -47,7 +47,7 @@ const ChatRoom = ({ username, room }) => {
         setConnectionStatus('connecting');
 
         // Use secure WebSocket connection with proper error handling
-        ws.current = new WebSocket('ws://web-socket-chat-app-5jc7.onrender.com');
+        ws.current = new WebSocket('wss://web-socket-chat-app-5jc7.onrender.com');
 
         ws.current.onopen = () => {
             setConnectionStatus('connected');
